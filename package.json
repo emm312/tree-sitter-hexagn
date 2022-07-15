@@ -1,5 +1,5 @@
 {
-  "name": "tree-sitter-hexagn",
+  "name": "tree_sitter_hexagn",
   "version": "1.0.0",
   "description": "hexagn tree sitter bindings",
   "main": "bindings/node",

@@ -1,1 +1,0 @@
-{"rustc":2710040094460752720,"features":"","target":0,"profile":0,"path":0,"deps":[[16123466186852658241,"build_script_build",false,16455312625621207710]],"local":[{"RerunIfChanged":{"output":"debug\\build\\tree-sitter-hexagn-bffb8308fe6c8a05\\output","paths":["src\\parser.c"]}}],"rustflags":[],"metadata":0,"config":0,"compile_kind":0}
