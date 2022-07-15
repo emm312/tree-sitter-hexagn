@@ -1,0 +1,28 @@
+{
+  "name": "tree-sitter-hexagn",
+  "version": "1.0.0",
+  "description": "hexagn tree sitter bindings",
+  "main": "bindings/node",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "nan": "^2.16.0"
+  },
+  "devDependencies": {
+    "tree-sitter-cli": "^0.20.6"
+  },
+  "tree-sitter": [
+    {
+        "scope": "source.hxgn",
+        "file-types": [
+            "hxgn"
+        ],
+        "highlights": [
+          "queries/highlights.scm"
+        ]
+    }
+  ]
+}
