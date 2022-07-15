@@ -100,7 +100,7 @@ module.exports = grammar({
 
 
         _expression: $ => repeat1(
-            eq(
+            seq(
                 choice($.identifier,$.number),
                 repeat(seq(
                     alias(choice("+", "-", "*", "/", "^", "==", "!=", "<", ">", "<=", ">="), $.equals),
