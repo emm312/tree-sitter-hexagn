@@ -1,0 +1,243 @@
+cargo:rerun-if-env-changed=TREE_SITTER_STATIC_ANALYSIS
+cargo:rerun-if-changed=src\alloc.c
+cargo:rerun-if-changed=src\alloc.h
+cargo:rerun-if-changed=src\array.h
+cargo:rerun-if-changed=src\atomic.h
+cargo:rerun-if-changed=src\clock.h
+cargo:rerun-if-changed=src\error_costs.h
+cargo:rerun-if-changed=src\get_changed_ranges.c
+cargo:rerun-if-changed=src\get_changed_ranges.h
+cargo:rerun-if-changed=src\host.h
+cargo:rerun-if-changed=src\language.c
+cargo:rerun-if-changed=src\language.h
+cargo:rerun-if-changed=src\length.h
+cargo:rerun-if-changed=src\lexer.c
+cargo:rerun-if-changed=src\lexer.h
+cargo:rerun-if-changed=src\lib.c
+cargo:rerun-if-changed=src\node.c
+cargo:rerun-if-changed=src\parser.c
+cargo:rerun-if-changed=src\point.h
+cargo:rerun-if-changed=src\query.c
+cargo:rerun-if-changed=src\reduce_action.h
+cargo:rerun-if-changed=src\reusable_node.h
+cargo:rerun-if-changed=src\stack.c
+cargo:rerun-if-changed=src\stack.h
+cargo:rerun-if-changed=src\subtree.c
+cargo:rerun-if-changed=src\subtree.h
+cargo:rerun-if-changed=src\tree.c
+cargo:rerun-if-changed=src\tree.h
+cargo:rerun-if-changed=src\tree_cursor.c
+cargo:rerun-if-changed=src\tree_cursor.h
+cargo:rerun-if-changed=src\unicode
+cargo:rerun-if-changed=src\unicode.h
+TARGET = Some("x86_64-pc-windows-msvc")
+OPT_LEVEL = Some("0")
+HOST = Some("x86_64-pc-windows-msvc")
+CC_x86_64-pc-windows-msvc = None
+CC_x86_64_pc_windows_msvc = None
+HOST_CC = None
+CC = None
+CFLAGS_x86_64-pc-windows-msvc = None
+CFLAGS_x86_64_pc_windows_msvc = None
+HOST_CFLAGS = None
+CFLAGS = None
+CRATE_CC_NO_DEFAULTS = None
+CARGO_CFG_TARGET_FEATURE = Some("fxsr,sse,sse2")
+DEBUG = Some("true")
+CC_x86_64-pc-windows-msvc = None
+CC_x86_64_pc_windows_msvc = None
+HOST_CC = None
+CC = None
+CFLAGS_x86_64-pc-windows-msvc = None
+CFLAGS_x86_64_pc_windows_msvc = None
+HOST_CFLAGS = None
+CFLAGS = None
+CRATE_CC_NO_DEFAULTS = None
+CARGO_CFG_TARGET_FEATURE = Some("fxsr,sse,sse2")
+CC_x86_64-pc-windows-msvc = None
+CC_x86_64_pc_windows_msvc = None
+HOST_CC = None
+CC = None
+CFLAGS_x86_64-pc-windows-msvc = None
+CFLAGS_x86_64_pc_windows_msvc = None
+HOST_CFLAGS = None
+CFLAGS = None
+CRATE_CC_NO_DEFAULTS = None
+CARGO_CFG_TARGET_FEATURE = Some("fxsr,sse,sse2")
+running: "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.31.31103\\bin\\HostX64\\x64\\cl.exe" "-nologo" "-MD" "-Z7" "-Brepro" "-I" "src" "-I" "include" "-W4" "-Foc:\\Users\\emmtb\\Desktop\\coding\\tree-sitter-hexagn\\target\\debug\\build\\tree-sitter-bcf5f8c4827165bb\\out\\src\\lib.o" "-c" "src\\lib.c"
+lib.c
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./alloc.c(35): warning C4232: nonstandard extension used: 'ts_current_free': address of dllimport 'free' is not static, identity not guaranteed
+C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\ucrt\corecrt_malloc.h(89): note: see declaration of 'free'
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./array.h(179): warning C4267: 'function': conversion from 'size_t' to 'uint32_t', possible loss of data
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./subtree.h(35): warning C4201: nonstandard extension used: nameless struct/union
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./subtree.h(146): warning C4201: nonstandard extension used: nameless struct/union
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./subtree.h(153): warning C4201: nonstandard extension used: nameless struct/union
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./language.h(86): warning C4456: declaration of 'i' hides previous local declaration
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./language.h(83): note: see declaration of 'i'
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./node.c(111): warning C4244: 'initializing': conversion from 'uint32_t' to 'TSSymbol', possible loss of data
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./node.c(415): warning C4244: 'initializing': conversion from 'uint32_t' to 'TSSymbol', possible loss of data
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./node.c(421): warning C4244: 'initializing': conversion from 'uint32_t' to 'TSSymbol', possible loss of data
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./node.c(443): warning C4244: 'initializing': conversion from 'uint32_t' to 'TSSymbol', possible loss of data
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./parser.c(578): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./parser.c(618): warning C4267: '=': conversion from 'size_t' to 'uint32_t', possible loss of data
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./parser.c(872): warning C4456: declaration of 'children' hides previous local declaration
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./parser.c(856): note: see declaration of 'children'
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./parser.c(995): warning C4456: declaration of 'i' hides previous local declaration
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./parser.c(990): note: see declaration of 'i'
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./parser.c(1013): warning C4244: '=': conversion from 'const uint32_t' to 'TSSymbol', possible loss of data
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./parser.c(1019): warning C4456: declaration of 'i' hides previous local declaration
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./parser.c(990): note: see declaration of 'i'
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./parser.c(1042): warning C4456: declaration of 'i' hides previous local declaration
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./parser.c(990): note: see declaration of 'i'
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./parser.c(1814): warning C4996: 'fdopen': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _fdopen. See online help for details.
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./query.c(320): warning C4244: 'function': conversion from '__int64' to 'uint32_t', possible loss of data
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./query.c(324): warning C4244: '=': conversion from 'uint32_t' to 'uint8_t', possible loss of data
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./query.c(355): warning C4244: 'function': conversion from 'int32_t' to 'wint_t', possible loss of data
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./query.c(370): warning C4244: 'function': conversion from 'int32_t' to 'wint_t', possible loss of data
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./query.c(377): warning C4244: 'function': conversion from 'int32_t' to 'wint_t', possible loss of data
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./query.c(387): warning C4244: 'return': conversion from '__int64' to 'uint32_t', possible loss of data
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./query.c(455): warning C4244: 'return': conversion from 'uint32_t' to 'uint16_t', possible loss of data
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./query.c(777): warning C4244: 'return': conversion from 'uint32_t' to 'uint16_t', possible loss of data
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./query.c(1208): warning C4244: 'initializing': conversion from 'const uint16_t' to 'uint8_t', possible loss of data
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./query.c(1340): warning C4456: declaration of 'i' hides previous local declaration
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./query.c(1328): note: see declaration of 'i'
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./query.c(1340): warning C4456: declaration of 'exists' hides previous local declaration
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./query.c(1336): note: see declaration of 'exists'
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./query.c(1468): warning C4456: declaration of 'parent_symbol' hides previous local declaration
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./query.c(1331): note: see declaration of 'parent_symbol'
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./query.c(1473): warning C4456: declaration of 'subgraph_index' hides previous local declaration
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./query.c(1336): note: see declaration of 'subgraph_index'
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./query.c(1473): warning C4456: declaration of 'exists' hides previous local declaration
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./query.c(1336): note: see declaration of 'exists'
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./query.c(1476): warning C4456: declaration of 'subgraph' hides previous local declaration
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./query.c(1350): note: see declaration of 'subgraph'
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./query.c(1640): warning C4456: declaration of 'exists' hides previous local declaration
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./query.c(1473): note: see declaration of 'exists'
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./query.c(1692): warning C4456: declaration of 'i' hides previous local declaration
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./query.c(1328): note: see declaration of 'i'
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./query.c(1692): warning C4456: declaration of 'exists' hides previous local declaration
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./query.c(1336): note: see declaration of 'exists'
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./query.c(1168): warning C4244: 'initializing': conversion from 'const uint32_t' to 'TSSymbol', possible loss of data
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./query.c(1329): warning C4244: 'initializing': conversion from 'uint32_t' to 'uint16_t', possible loss of data
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./query.c(1856): warning C4244: '=': conversion from 'unsigned int' to 'uint16_t', possible loss of data
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./query.c(1882): warning C4244: '=': conversion from 'uint32_t' to 'uint16_t', possible loss of data
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./query.c(1921): warning C4244: 'function': conversion from '__int64' to 'uint32_t', possible loss of data
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./query.c(1925): warning C4244: 'function': conversion from '__int64' to 'uint32_t', possible loss of data
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./query.c(1984): warning C4456: declaration of 'length' hides previous local declaration
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./query.c(1953): note: see declaration of 'length'
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./query.c(2007): warning C4456: declaration of 'id' hides previous local declaration
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./query.c(1954): note: see declaration of 'id'
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./query.c(2022): warning C4456: declaration of 'length' hides previous local declaration
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./query.c(1953): note: see declaration of 'length'
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./query.c(2023): warning C4456: declaration of 'id' hides previous local declaration
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./query.c(1954): note: see declaration of 'id'
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./query.c(1953): warning C4244: 'initializing': conversion from '__int64' to 'uint32_t', possible loss of data
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./query.c(1984): warning C4244: 'initializing': conversion from '__int64' to 'uint32_t', possible loss of data
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./query.c(2022): warning C4244: 'initializing': conversion from '__int64' to 'uint32_t', possible loss of data
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./query.c(2067): warning C4244: 'initializing': conversion from 'const uint32_t' to 'uint16_t', possible loss of data
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./query.c(2111): warning C4244: 'function': conversion from 'uint32_t' to 'uint16_t', possible loss of data
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./query.c(2123): warning C4244: '=': conversion from 'uint32_t' to 'uint16_t', possible loss of data
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./query.c(2124): warning C4244: '=': conversion from 'uint32_t' to 'uint16_t', possible loss of data
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./query.c(2222): warning C4244: 'function': conversion from 'uint32_t' to 'uint16_t', possible loss of data
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./query.c(2326): warning C4244: 'function': conversion from 'const uint32_t' to 'uint16_t', possible loss of data
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./query.c(2358): warning C4244: 'function': conversion from 'uint32_t' to 'uint16_t', possible loss of data
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./query.c(2378): warning C4244: 'function': conversion from 'uint32_t' to 'uint16_t', possible loss of data
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./query.c(2458): warning C4244: 'function': conversion from 'uint32_t' to 'uint16_t', possible loss of data
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./query.c(2459): warning C4244: '=': conversion from 'const uint32_t' to 'uint16_t', possible loss of data
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./query.c(2472): warning C4244: 'function': conversion from 'uint32_t' to 'uint16_t', possible loss of data
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./query.c(2473): warning C4244: '=': conversion from 'const uint32_t' to 'uint16_t', possible loss of data
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./query.c(2482): warning C4244: '=': conversion from 'uint32_t' to 'uint16_t', possible loss of data
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./query.c(2496): warning C4244: '=': conversion from 'uint32_t' to 'uint16_t', possible loss of data
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./query.c(2191): warning C4244: 'initializing': conversion from '__int64' to 'uint32_t', possible loss of data
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./query.c(2242): warning C4244: 'initializing': conversion from '__int64' to 'uint32_t', possible loss of data
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./query.c(2275): warning C4244: 'initializing': conversion from '__int64' to 'uint32_t', possible loss of data
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./query.c(2305): warning C4244: 'initializing': conversion from 'uint32_t' to 'uint16_t', possible loss of data
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./query.c(2386): warning C4244: 'initializing': conversion from '__int64' to 'uint32_t', possible loss of data
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./query.c(2505): warning C4244: 'initializing': conversion from '__int64' to 'uint32_t', possible loss of data
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./query.c(2637): warning C4456: declaration of 'step' hides previous local declaration
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./query.c(2616): note: see declaration of 'step'
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./query.c(2645): warning C4244: 'initializing': conversion from 'uint32_t' to 'uint16_t', possible loss of data
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./query.c(2646): warning C4244: 'initializing': conversion from 'uint32_t' to 'uint16_t', possible loss of data
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./query.c(2714): warning C4244: 'function': conversion from 'uint32_t' to 'uint16_t', possible loss of data
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./query.c(2723): warning C4244: 'function': conversion from 'uint32_t' to 'uint16_t', possible loss of data
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./query.c(2731): warning C4244: 'function': conversion from 'uint32_t' to 'uint16_t', possible loss of data
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./query.c(2796): warning C4244: 'function': conversion from 'int' to 'uint16_t', possible loss of data
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./query.c(2919): warning C4244: 'function': conversion from 'uint32_t' to 'uint16_t', possible loss of data
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./query.c(2982): warning C4244: 'function': conversion from 'uint32_t' to 'uint16_t', possible loss of data
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./query.c(2986): warning C4244: 'function': conversion from 'uint32_t' to 'uint16_t', possible loss of data
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./query.c(3083): warning C4244: 'initializing': conversion from 'uint32_t' to 'uint16_t', possible loss of data
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./query.c(3134): warning C4244: 'function': conversion from 'uint32_t' to 'uint16_t', possible loss of data
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./query.c(3144): warning C4244: 'function': conversion from 'uint32_t' to 'uint16_t', possible loss of data
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./query.c(3192): warning C4244: 'function': conversion from 'const uint32_t' to 'uint16_t', possible loss of data
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./query.c(3182): warning C4244: 'initializing': conversion from '__int64' to 'uint32_t', possible loss of data
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./query.c(3217): warning C4244: 'function': conversion from 'uint32_t' to 'uint16_t', possible loss of data
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./query.c(3270): warning C4244: 'function': conversion from 'uint32_t' to 'uint16_t', possible loss of data
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./query.c(3369): warning C4456: declaration of 'i' hides previous local declaration
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./query.c(3345): note: see declaration of 'i'
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./query.c(3441): warning C4244: 'function': conversion from 'uint32_t' to 'uint16_t', possible loss of data
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./query.c(3526): warning C4456: declaration of 'state' hides previous local declaration
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./query.c(3370): note: see declaration of 'state'
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./query.c(3527): warning C4456: declaration of 'next_step' hides previous local declaration
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./query.c(3518): note: see declaration of 'next_step'
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./query.c(3567): warning C4456: declaration of 'i' hides previous local declaration
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./query.c(3345): note: see declaration of 'i'
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./query.c(3606): warning C4244: 'function': conversion from 'uint32_t' to 'uint16_t', possible loss of data
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./query.c(3620): warning C4244: 'function': conversion from 'uint32_t' to 'uint16_t', possible loss of data
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./query.c(3647): warning C4244: 'function': conversion from '__int64' to 'uint32_t', possible loss of data
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./query.c(3659): warning C4456: declaration of 'i' hides previous local declaration
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./query.c(3345): note: see declaration of 'i'
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./query.c(3664): warning C4018: '>': signed/unsigned mismatch
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./query.c(3705): warning C4244: 'function': conversion from 'uint32_t' to 'uint16_t', possible loss of data
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./query.c(3708): warning C4244: '=': conversion from 'const uint32_t' to 'uint16_t', possible loss of data
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./query.c(3709): warning C4244: 'function': conversion from 'uint32_t' to 'uint16_t', possible loss of data
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./query.c(3723): warning C4244: 'function': conversion from 'const uint32_t' to 'uint16_t', possible loss of data
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./query.c(3737): warning C4244: 'function': conversion from 'const uint32_t' to 'uint16_t', possible loss of data
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./query.c(3776): warning C4244: 'function': conversion from 'uint32_t' to 'uint16_t', possible loss of data
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./query.c(3783): warning C4244: 'function': conversion from 'uint32_t' to 'uint16_t', possible loss of data
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./query.c(3829): warning C4244: 'function': conversion from 'uint32_t' to 'uint16_t', possible loss of data
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./query.c(3832): warning C4244: '=': conversion from 'const uint32_t' to 'uint16_t', possible loss of data
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./query.c(3847): warning C4244: 'function': conversion from 'uint32_t' to 'uint16_t', possible loss of data
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./stack.c(329): warning C4267: 'function': conversion from 'size_t' to 'uint32_t', possible loss of data
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./stack.c(336): warning C4456: declaration of 'iterator' hides previous local declaration
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./stack.c(319): note: see declaration of 'iterator'
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./subtree.c(182): warning C4244: 'initializing': conversion from 'TSSymbol' to 'uint8_t', possible loss of data
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./subtree.c(185): warning C4244: 'initializing': conversion from 'uint32_t' to 'uint8_t', possible loss of data
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./subtree.c(183): warning C4244: 'initializing': conversion from 'uint32_t' to 'uint8_t', possible loss of data
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./subtree.c(186): warning C4244: 'initializing': conversion from 'uint32_t' to 'uint8_t', possible loss of data
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./subtree.c(232): warning C4244: '=': conversion from 'TSSymbol' to 'uint8_t', possible loss of data
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./subtree.c(492): warning C4244: '=': conversion from 'uint32_t' to 'uint16_t', possible loss of data
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./subtree.c(494): warning C4244: '=': conversion from 'uint32_t' to 'uint16_t', possible loss of data
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./subtree.c(516): warning C4267: '=': conversion from 'size_t' to 'uint32_t', possible loss of data
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./subtree.c(523): warning C4244: 'initializing': conversion from 'uint32_t' to 'uint16_t', possible loss of data
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./subtree.c(533): warning C4244: 'initializing': conversion from 'unsigned int' to 'uint16_t', possible loss of data
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./subtree.c(648): warning C4459: declaration of 'StackEntry' hides global declaration
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./reusable_node.h(7): note: see declaration of 'StackEntry'
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./subtree.c(662): warning C4457: declaration of 'edit' hides function parameter
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./subtree.c(644): note: see declaration of 'edit'
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./subtree.c(708): warning C4244: '=': conversion from 'uint32_t' to 'uint8_t', possible loss of data
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./subtree.c(709): warning C4244: '=': conversion from 'uint32_t' to 'uint8_t', possible loss of data
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./subtree.c(710): warning C4244: '=': conversion from 'uint32_t' to 'uint8_t', possible loss of data
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./subtree.c(711): warning C4244: '=': conversion from 'uint32_t' to 'uint8_t', possible loss of data
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./subtree.c(909): warning C4457: declaration of 'alias_symbol' hides function parameter
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./subtree.c(842): note: see declaration of 'alias_symbol'
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./subtree.c(912): warning C4457: declaration of 'alias_is_named' hides function parameter
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./subtree.c(842): note: see declaration of 'alias_is_named'
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./subtree.c(917): warning C4456: declaration of 'i' hides previous local declaration
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./subtree.c(900): note: see declaration of 'i'
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./subtree.c(1001): warning C4457: declaration of 'alias_symbol' hides function parameter
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./subtree.c(960): note: see declaration of 'alias_symbol'
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./tree_cursor.c(380): warning C4456: declaration of 'i' hides previous local declaration
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./tree_cursor.c(303): note: see declaration of 'i'
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./tree_cursor.c(390): warning C4456: declaration of 'i' hides previous local declaration
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./tree_cursor.c(303): note: see declaration of 'i'
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./tree_cursor.c(460): warning C4456: declaration of 'i' hides previous local declaration
+C:\Users\emmtb\.cargo\registry\src\github.com-1ecc6299db9ec823\tree-sitter-0.20.8\src\./tree_cursor.c(435): note: see declaration of 'i'
+exit code: 0
+AR_x86_64-pc-windows-msvc = None
+AR_x86_64_pc_windows_msvc = None
+HOST_AR = None
+AR = None
+running: "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.31.31103\\bin\\HostX64\\x64\\lib.exe" "-out:c:\\Users\\emmtb\\Desktop\\coding\\tree-sitter-hexagn\\target\\debug\\build\\tree-sitter-bcf5f8c4827165bb\\out\\libtree-sitter.a" "-nologo" "c:\\Users\\emmtb\\Desktop\\coding\\tree-sitter-hexagn\\target\\debug\\build\\tree-sitter-bcf5f8c4827165bb\\out\\src\\lib.o"
+exit code: 0
+cargo:rustc-link-lib=static=tree-sitter
+cargo:rustc-link-search=native=c:\Users\emmtb\Desktop\coding\tree-sitter-hexagn\target\debug\build\tree-sitter-bcf5f8c4827165bb\out
