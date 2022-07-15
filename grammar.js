@@ -26,13 +26,18 @@ module.exports = grammar({
         
         equals: $ => '=',
 
-        variable_definition: $ => seq(
+        variable_definition: $ => choice(seq(
             $.type,
             $.identifier,
             optional(alias('=', $.equals)),
             optional($._expression),
             ';'
-        ),
+            ), seq(
+                $.identifier,
+                alias('=', $.equals),
+                $._expression,
+                ';'
+            )),
         type: $ => choice(
             'int8',
             'int16',
