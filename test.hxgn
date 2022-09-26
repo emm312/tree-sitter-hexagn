@@ -1,3 +1,79 @@
+import io.graphics;
+
 int8 main() {
-    int32 variable = 44;
+    int32 index = 0;
+    int32 iterations = 150;
+    int32 zr = 0;
+    int32 zi = 0;
+    int32 cr = 0;
+    int32 ci = 0;
+    int32 cx = 0;
+    int32 cy = 0;
+    int32 zrnext = 0;
+    int32 zinext = 0;
+    int32 px = 671088640;
+    int32 size = 500;
+    int32 startx = 2097152;
+    int32 starty = 1310720;
+    urcl "//those are inverted x and y coordinates of top left pixel";
+    
+
+    startx = 4294967295 - startx;
+    starty = 4294967295 - starty;
+    px = px / 256;
+    urcl "//this is zoom, 256 = 1x";
+    px = px / size;
+    urcl " OUT %BUFFER 1";
+    while (cy < size) {
+        ci = starty + px * cy; //-1.25 - 1.25
+        cx = 0;
+
+        while (cx < size) {
+            cr = startx + px * cx; //-2 - 0.5
+            zr = cr;
+            zi = ci;
+            index = 0;
+
+            int32 abs_zi = 0;
+            int32 abs_max = 0;
+            int32 color = 247;
+            while (index < iterations) {
+                if (color != 0) {
+                    zr = zr / 1024;
+                    zi = zi / 1024;
+                    zrnext = zr * zr;
+                    zinext = zi * zi;
+                    zrnext = zrnext - zinext;
+                    zinext = 2 * zr * zi;
+                    zr = zrnext + cr;
+                    zi = zinext + ci;
+                    if (zr > 2147483648) {  
+                        abs_max = 0 - zr;
+                    }
+                    if (zi > 2147483648) {
+                        abs_zi = 0 - zi;
+                    }
+                    if (abs_zi > abs_max) {
+                        abs_max = abs_zi;
+                    }
+                    if (abs_max > 2097152) {
+                        color = 0;
+                    }
+                }
+                index = index + 1;
+            }
+            if (color != 0) {
+                zr = zr / 1024;
+                zi = zi / 1024;
+                zrnext = zr * zr;
+                zinext = zrnext + zi * zi;
+                if (zinext < 4194304) {
+                    setpixel(cx, cy, color);
+                }
+            }
+            cx = cx + 1;
+        }
+        urcl "OUT %BUFFER 2";
+        cy = cy + 1;
+    }
 }

@@ -1,22 +1,134 @@
 [
   {
+    "type": "binary_expression",
+    "named": true,
+    "fields": {
+      "left": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "binary_expression",
+            "named": true
+          },
+          {
+            "type": "func_call",
+            "named": true
+          },
+          {
+            "type": "identifier",
+            "named": true
+          },
+          {
+            "type": "number",
+            "named": true
+          }
+        ]
+      },
+      "operator": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "!=",
+            "named": false
+          },
+          {
+            "type": "*",
+            "named": false
+          },
+          {
+            "type": "+",
+            "named": false
+          },
+          {
+            "type": "-",
+            "named": false
+          },
+          {
+            "type": "/",
+            "named": false
+          },
+          {
+            "type": "<",
+            "named": false
+          },
+          {
+            "type": "<=",
+            "named": false
+          },
+          {
+            "type": "==",
+            "named": false
+          },
+          {
+            "type": ">",
+            "named": false
+          },
+          {
+            "type": ">=",
+            "named": false
+          }
+        ]
+      },
+      "right": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "binary_expression",
+            "named": true
+          },
+          {
+            "type": "func_call",
+            "named": true
+          },
+          {
+            "type": "identifier",
+            "named": true
+          },
+          {
+            "type": "number",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
     "type": "block",
     "named": true,
     "fields": {},
     "children": {
       "multiple": true,
-      "required": true,
+      "required": false,
       "types": [
+        {
+          "type": "block",
+          "named": true
+        },
+        {
+          "type": "func_call",
+          "named": true
+        },
         {
           "type": "if_statement",
           "named": true
         },
         {
-          "type": "parens",
+          "type": "import_statement",
           "named": true
         },
         {
           "type": "return_statement",
+          "named": true
+        },
+        {
+          "type": "urcl_codeblock",
+          "named": true
+        },
+        {
+          "type": "variable_assignment",
           "named": true
         },
         {
@@ -25,6 +137,25 @@
         },
         {
           "type": "while_loop",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "func_call",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "parameter_list",
           "named": true
         }
       ]
@@ -66,11 +197,15 @@
       "required": true,
       "types": [
         {
+          "type": "binary_expression",
+          "named": true
+        },
+        {
           "type": "block",
           "named": true
         },
         {
-          "type": "equals",
+          "type": "func_call",
           "named": true
         },
         {
@@ -84,9 +219,20 @@
         {
           "type": "number",
           "named": true
-        },
+        }
+      ]
+    }
+  },
+  {
+    "type": "import_statement",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
         {
-          "type": "parens",
+          "type": "identifier",
           "named": true
         }
       ]
@@ -98,14 +244,10 @@
     "fields": {},
     "children": {
       "multiple": true,
-      "required": true,
+      "required": false,
       "types": [
         {
           "type": "identifier",
-          "named": true
-        },
-        {
-          "type": "parens",
           "named": true
         },
         {
@@ -120,11 +262,15 @@
     "named": true,
     "fields": {},
     "children": {
-      "multiple": true,
+      "multiple": false,
       "required": true,
       "types": [
         {
-          "type": "equals",
+          "type": "binary_expression",
+          "named": true
+        },
+        {
+          "type": "func_call",
           "named": true
         },
         {
@@ -147,20 +293,93 @@
       "required": false,
       "types": [
         {
+          "type": "block",
+          "named": true
+        },
+        {
+          "type": "func_call",
+          "named": true
+        },
+        {
           "type": "function_definition",
           "named": true
         },
         {
+          "type": "if_statement",
+          "named": true
+        },
+        {
+          "type": "import_statement",
+          "named": true
+        },
+        {
+          "type": "return_statement",
+          "named": true
+        },
+        {
+          "type": "urcl_codeblock",
+          "named": true
+        },
+        {
+          "type": "variable_assignment",
+          "named": true
+        },
+        {
           "type": "variable_definition",
+          "named": true
+        },
+        {
+          "type": "while_loop",
           "named": true
         }
       ]
     }
   },
   {
-    "type": "type",
+    "type": "urcl_codeblock",
     "named": true,
-    "fields": {}
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "string",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "variable_assignment",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "binary_expression",
+          "named": true
+        },
+        {
+          "type": "equals",
+          "named": true
+        },
+        {
+          "type": "func_call",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "number",
+          "named": true
+        }
+      ]
+    }
   },
   {
     "type": "variable_definition",
@@ -171,7 +390,15 @@
       "required": true,
       "types": [
         {
+          "type": "binary_expression",
+          "named": true
+        },
+        {
           "type": "equals",
+          "named": true
+        },
+        {
+          "type": "func_call",
           "named": true
         },
         {
@@ -198,11 +425,15 @@
       "required": true,
       "types": [
         {
+          "type": "binary_expression",
+          "named": true
+        },
+        {
           "type": "block",
           "named": true
         },
         {
-          "type": "equals",
+          "type": "func_call",
           "named": true
         },
         {
@@ -219,6 +450,10 @@
         }
       ]
     }
+  },
+  {
+    "type": "!=",
+    "named": false
   },
   {
     "type": "(",
@@ -253,12 +488,32 @@
     "named": false
   },
   {
+    "type": "<",
+    "named": false
+  },
+  {
+    "type": "<=",
+    "named": false
+  },
+  {
     "type": "=",
     "named": false
   },
   {
-    "type": "char",
+    "type": "==",
     "named": false
+  },
+  {
+    "type": ">",
+    "named": false
+  },
+  {
+    "type": ">=",
+    "named": false
+  },
+  {
+    "type": "comments",
+    "named": true
   },
   {
     "type": "else",
@@ -281,19 +536,7 @@
     "named": false
   },
   {
-    "type": "int16",
-    "named": false
-  },
-  {
-    "type": "int32",
-    "named": false
-  },
-  {
-    "type": "int64",
-    "named": false
-  },
-  {
-    "type": "int8",
+    "type": "import",
     "named": false
   },
   {
@@ -305,15 +548,19 @@
     "named": true
   },
   {
-    "type": "parens",
-    "named": true
-  },
-  {
     "type": "return",
     "named": false
   },
   {
     "type": "string",
+    "named": true
+  },
+  {
+    "type": "type",
+    "named": true
+  },
+  {
+    "type": "urcl",
     "named": false
   },
   {

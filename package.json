@@ -16,13 +16,10 @@
   },
   "tree-sitter": [
     {
-        "scope": "source.hxgn",
-        "file-types": [
-            "hxgn"
-        ],
-        "highlights": [
-          "queries/highlights.scm"
-        ]
+      "scope": "source.hxgn",
+      "file-types": [
+        "hxgn"
+      ]
     }
   ]
 }

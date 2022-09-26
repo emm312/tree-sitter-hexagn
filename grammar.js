@@ -1,15 +1,18 @@
 module.exports = grammar({
     name: 'hexagn',
+    extras: $ => [
+      $._whitespace,
+      $.comments
+    ],
+    
 
     rules: {
-        source_file: $ => repeat($._definition),
-
-        _definition: $ => choice(
-            $.function_definition,
-            $.variable_definition
-        ),
-
+        
+        source_file: $ => repeat(choice($._statement, $.function_definition)),
+        _whitespace: $ => /\s+/,
         func_name: $ => /\w+/,
+        string: $ => /".*?"/,
+        comments: $ =>  /\/\/.*/,
 
         function_definition: $ => seq(
             $.type,
@@ -18,99 +21,158 @@ module.exports = grammar({
             $.block
         ),
 
+        urcl_codeblock: $ => seq(
+          'urcl',
+          $.string
+        ),
+
         parameter_list: $ => seq(
-            alias('(',$.parens),
-            repeat(seq($.type, $.identifier, optional(','))),
-            alias(')',$.parens)
+            '(',
+            repeat(seq(optional($.type), $.identifier, optional(','))),
+            ')'
         ),
         
         equals: $ => '=',
 
-        variable_definition: $ => choice(seq(
+        variable_definition: $ => seq(
             $.type,
             $.identifier,
-            optional(alias('=', $.equals)),
-            optional($._expression),
-            ';'
-            ), seq(
-                $.identifier,
-                alias('=', $.equals),
-                $._expression,
-                ';'
-            )),
-        type: $ => choice(
+            alias('=', $.equals),
+            $._expression
+            
+        ),
+
+        variable_assignment: $ => seq(
+          $.identifier,
+          alias('=', $.equals),
+          $._expression
+        ),
+        type: $ => token(choice(
             'int8',
             'int16',
             'int32',
             'int64',
+            'uint8',
+            'uint16',
+            'uint32',
             'string',
             'char'
-        ),
+        )),
 
         block: $ => seq(
-            alias('{', $.parens),
-            repeat($._any),
-            alias('}', $.parens)
-        ),
-        _any : $ => choice(
-            $.variable_definition,
-            $._statement
+            '{',
+            optional(repeat($._statement)),
+            '}'
         ),
 
-        _statement: $ => choice(
+        _statement: $ => choice(seq(choice(
             $.return_statement,
+            $.variable_assignment,
+            $.variable_definition,
+            $.func_call,
+            $.import_statement,
+            $.block,
+            
+            $.urcl_codeblock
+            // TODO: other kinds of statements
+        ), ';'), 
             $.while_loop,
             $.if_statement
-            // TODO: other kinds of statements
         ),
 
         keyword: $ => choice(
             'return',
             'while',
-            'if'
+            'if',
+            'urcl',
+            'import'
         ),
 
         return_statement: $ => seq(
             'return',
             $._expression,
-            ';'
         ),
         while_loop: $ => seq(
             alias('while', $.keyword),
-            '(',
-            $._expression,
-            ')',
+            seq('(', $._expression, ')'),
             $.block
         ),
         if_statement: $ => seq(
             alias('if', $.keyword),
-            alias('(', $.parens),
+            '(',
             $._expression,
-            alias(')', $.parens),
+            ')',
             $.block,
             optional(seq('else', $.block))
         ),
         
-        parens: $ => choice(
-            '(',
-            ')',
-            '{',
-            '}',
+
+
+        _expression: $ => choice($.binary_expression, $.func_call, $.identifier, $.number),
+        binary_expression: $ => choice(
+          prec.left(1, seq(
+            field("left", $._expression),
+            field("operator", "+"),
+            field("right", $._expression),
+          )),
+          prec.left(1, seq(
+            field("left", $._expression),
+            field("operator", "-"),
+            field("right", $._expression),
+          )),
+          prec.left(2, seq(
+            field("left", $._expression),
+            field("operator", "*"),
+            field("right", $._expression),
+          )),
+          prec.left(2, seq(
+            field("left", $._expression),
+            field("operator", "/"),
+            field("right", $._expression),
+          )),
+          prec.left(3, seq(
+            field("left", $._expression),
+            field("operator", "<"),
+            field("right", $._expression),
+          )),
+          prec.left(3, seq(
+            field("left", $._expression),
+            field("operator", ">"),
+            field("right", $._expression),
+          )),
+          prec.left(3, seq(
+            field("left", $._expression),
+            field("operator", "=="),
+            field("right", $._expression),
+          )),
+          prec.left(3, seq(
+            field("left", $._expression),
+            field("operator", "!="),
+            field("right", $._expression),
+          )),
+          prec.left(3, seq(
+            field("left", $._expression),
+            field("operator", "<="),
+            field("right", $._expression),
+          )),
+          prec.left(3, seq(
+            field("left", $._expression),
+            field("operator", ">="),
+            field("right", $._expression),
+          )),
+       ),
+
+        import_statement: $ => seq(
+            'import',
+            $.identifier,
+        ),
+        
+        func_call: $ => seq(
+            $.identifier, $.parameter_list,
         ),
 
 
-        _expression: $ => repeat1(
-            seq(
-                choice($.identifier,$.number),
-                repeat(seq(
-                    alias(choice("+", "-", "*", "/", "^", "==", "!=", "<", ">", "<=", ">="), $.equals),
-                    choice($.identifier,$.number)
-                ))
-            )
-            // TODO: other kinds of expressions
-        ),
-
-        identifier: $ => /[a-z]+/,
+        identifier: $ => /[A-Za-z-_.]+/,
 
         number: $ => /\d+/
     }
